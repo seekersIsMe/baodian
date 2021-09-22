@@ -3,8 +3,8 @@ import App from './App.vue'
 import router from "./router";
 import animated from 'animate.css'
 import echarts from 'echarts'
-Vue.prototype.$echarts = echarts
 Vue.use(animated)
+Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false
 window.addEventListener('popstate', function () {
   router.isBack = true
