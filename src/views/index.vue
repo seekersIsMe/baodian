@@ -1,19 +1,22 @@
 <template>
   <div class="index-wrap">
-    首页
-    <button @click="doSome">点击变化</button>
+    <testEcharts />
     <button @click="next">下一页</button>
   </div>
 </template>
 
 <script>
 import { getArticles } from "@/api/articles";
+import testEcharts from '@/components/testEcharts'
 export default {
   data() {
     let that = this;
     return {
       show: true,
     };
+  },
+  components: {
+      testEcharts
   },
   created() {
       this.getArticlesList()
@@ -30,8 +33,7 @@ export default {
       this.$router.push({
         path: "/about",
       });
-    },
-    doSome() {},
+    }
   },
   watch: {
     obj: {
@@ -39,7 +41,7 @@ export default {
         console.log(val, oldVal);
       },
       deep: true,
-    },
+    }
   },
 };
 </script>
@@ -47,6 +49,6 @@ export default {
 <style  lang="scss" scoped>
 .index-wrap {
   height: 100vh;
-  background: salmon;
+//   background: salmon;
 }
 </style>

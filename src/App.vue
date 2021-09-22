@@ -53,9 +53,9 @@ export default {
   opacity: 0;
 }
 .slide-enter-active {
-  transition: 2s;
+  transition: 1s;
 }
 .slide-leave-active {
-  transition: 2s;
+  transition: 1s;
 }
 </style>
